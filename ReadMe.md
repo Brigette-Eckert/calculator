@@ -17,5 +17,5 @@ praticed problem solving via reverse engineeing project
 
 #Future Features/To Do: 
   ```
-
+	Add fav icon
   ```
