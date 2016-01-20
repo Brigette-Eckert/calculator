@@ -9,9 +9,14 @@ var runningTotal = "";
 $(".num").click(function(e){
   var num = e.target.innerHTML;
   buildString += num;
+ 
   runningTotal += num; 
+  if(buildString.length <= 16){
   console.log("the total is " + runningTotal);
   $("#display").html(buildString);
+  } else {
+    $("#display").html("number is too long");
+  }
 });
 
 //Clear Buttons
@@ -36,24 +41,26 @@ $(".op").click(function(e){
   var op = e.target.innerHTML;
   buildString = op;
   runningTotal += op; 
-  $("#display").html(buildString);
+    if(buildString.length <= 16){
+      $("#display").html(buildString);
+    }else {
+        $("#display").html("number is too long");
+    }
 });
 
-$("#add").click(function(){
-   runningTotal += "+";
-    buildString = "+";
-    $("#display").html(buildString);
-  
-});
 
 $("#percent").click(function(){
-  if(runningTotal.indexOf("%") == -1) {
+  if(buildString.indexOf("%") == -1) {
     buildString += "%";
     runningTotal += "/100"; 
   } else {
-    console.log("there is already a percent sign")
+    console.log("can't add percent sign")
   }
+    if(buildString.length <= 10){
     $("#display").html(buildString);
+  } else {
+        $("#display").html("number is too long");
+    }
 });
 
 
@@ -62,9 +69,13 @@ $("#decimal").click(function(){
     buildString += ".";
     runningTotal += "."; 
   } else {
-    console.log("can't add a decimal here")
+    console.log("can't add decimal")
   }
+    if(buildString.length <= 16){
     $("#display").html(buildString);
+  } else {
+        $("#display").html("number is too long");
+    }
 });
 
 $("#equal").click(function(){
