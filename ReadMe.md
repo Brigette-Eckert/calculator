@@ -1,3 +1,4 @@
+http://git.bbeckert.com/calculator/
 
 #What I learned from this project:
  ```
@@ -17,6 +18,5 @@ praticed problem solving via reverse engineeing project
 
 #Future Features/To Do: 
   ```
-	Add fav icon
 	prevent numbers from going outside div
   ```
